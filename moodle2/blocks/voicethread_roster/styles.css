@@ -1,0 +1,7 @@
+.block_voicethread_roster .content {padding:0px !important;}
+.centertext {text-align: center;}
+.redBorder { border: solid 1px #c91e1e; background: #ffe2e2; }
+.greenBorder { border: solid 1px #529042; background: #c3f7b5; }
+.greyBorder { border: solid 0px #ccc; background: #fff; }
+.roundedCorners { -webkit-border-radius: 5px 5px; -moz-border-radius: 5px 5px; }
+.form-defaultinfo {visibility:hidden;}
