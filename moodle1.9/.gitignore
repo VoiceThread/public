@@ -1,0 +1,19 @@
+# Ignore Moodle 1.9 source code while allowing VoiceThread's customizations to be
+# tracked by git.  This is somewhat involved because of the deep directory structure
+# and the fact that git requires a file or directory to be excluded before it can be 
+# negated to include it.
+/*
+!/filter
+!/blocks
+!/mod
+/filter/*
+!/filter/voicethread*
+!/filter/VoiceThread*
+/blocks/*
+!/blocks/voicethread*
+/mod/*
+!/mod/assignment
+/mod/assignment/*
+!/mod/assignment/type
+/mod/assignment/type/*
+!/mod/assignment/type/voicethread*
