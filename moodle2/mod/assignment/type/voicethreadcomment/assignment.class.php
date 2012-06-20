@@ -147,7 +147,7 @@ class assignment_voicethreadcomment extends assignment_base {
         ));
         $js_href = $CFG->wwwroot.'/mod/assignment/type/voicethreadcomment/porthole.min.js';
         $vtsite = trim($CFG->voicethread_site);
-        $src = 'http://bjpritch-dev.voicethread.com/picker/?picktype=moodle&parent_url='.urlencode(htmlspecialchars($PAGE->url->out()));
+        $src = 'http://'.$vtsite.'/picker/?picktype=moodle&parent_url='.urlencode(htmlspecialchars($PAGE->url->out()));
         $mform->addElement('text','var1', 'Please select your VoiceThread');
         $mform->addElement('html', '<iframe name="voicethread_select "id="voicethread_select" src="#" frameborder="1" width="415" height="350" scrolling="yes" style="display: block;">VoiceThread list</iframe>
                                     <script type="text/javascript" src="'.$js_href.'"></script>
