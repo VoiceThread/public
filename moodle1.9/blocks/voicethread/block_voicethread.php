@@ -75,8 +75,8 @@ class block_voicethread extends block_base {
        
       $voicethread_error_text = "VoiceThread Auth Token Unavailable. Please contact VoiceThread support.";
 
-      $vtjscode = '<link rel="stylesheet" type="text/css" href="http://moodle2.voicethread.com/moodle2.0/blocks/voicethread/styles.css" />';
-      
+      $css_href = '/blocks/voicethread/styles.css';
+      $this->content->text .= '<link type="text/css" href="'.$css_href.'" />';
       $vtjscode .= '<script type="text/javascript">';
       $vtjscode .= 'function openvtpopup(url, name, options) {';
       $vtjscode .= 'var fullurl = url;';
