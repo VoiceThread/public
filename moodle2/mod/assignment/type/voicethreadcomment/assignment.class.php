@@ -323,9 +323,14 @@ class assignment_voicethreadcomment extends assignment_base {
     $comment_list = array();
     VTAPI::setCommonParams(array('orgAPIKey' => $vtorgid));
     $vtapilinked = 0; $vtapierror = 0;
-    $vtuser = VTAPI::call('user.get', array(
-                'email' => $USER->email
-              ));
+    try {
+      $vtuser = VTAPI::call('user.get', array(
+                  'email' => $USER->email
+                ));
+    }
+    catch (Exception $e) {
+      return 0;
+    }
     $output = '';
     try {
       $comment_list = VTAPI::call('comment.getList', array(
